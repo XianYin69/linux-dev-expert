@@ -1,0 +1,88 @@
+{
+  "skill": "linux-dev-expert",
+  "version": "0.1.0",
+  "topology_frozen": true,
+  "leaves": [
+    {
+      "id": "posix-glibc-syscalls",
+      "title": "POSIX/glibc 与系统调用",
+      "question": "这个接口在目标 glibc/内核版本上的契约与错误语义是什么？",
+      "knowledge": "asset/knowledge/posix-glibc-syscalls.md",
+      "checklist": "asset/checklists/posix-glibc-syscalls.md",
+      "probes": ["scripts/probe_os.py", "scripts/probe_toolchain.py"],
+      "sources": ["references/标准与手册.md"]
+    },
+    {
+      "id": "process-thread-signal",
+      "title": "进程/线程/信号",
+      "question": "执行体如何创建、继承、终止，信号在何处被投递与打断？",
+      "knowledge": "asset/knowledge/process-thread-signal.md",
+      "checklist": "asset/checklists/process-thread-signal.md",
+      "probes": ["scripts/probe_handles.py", "scripts/probe_cgroup.py"],
+      "sources": ["references/标准与手册.md", "references/排障与性能.md"]
+    },
+    {
+      "id": "fd-io-epoll-iouring",
+      "title": "文件描述符与 I/O 多路复用",
+      "question": "阻塞点在哪、就绪事件如何取、缓冲与提交队列如何影响尾延迟？",
+      "knowledge": "asset/knowledge/fd-io-epoll-iouring.md",
+      "checklist": "asset/checklists/fd-io-epoll-iouring.md",
+      "probes": ["scripts/probe_handles.py", "scripts/probe_fs.py"],
+      "sources": ["references/标准与手册.md", "references/排障与性能.md"]
+    },
+    {
+      "id": "pthreads-memory-order",
+      "title": "pthreads 与内存序",
+      "question": "共享状态的 happens-before 从哪来，锁与原子是否覆盖全部访问？",
+      "knowledge": "asset/knowledge/pthreads-memory-order.md",
+      "checklist": "asset/checklists/pthreads-memory-order.md",
+      "probes": ["scripts/probe_toolchain.py"],
+      "sources": ["references/书目.md", "references/排障与性能.md"]
+    },
+    {
+      "id": "elf-abi-dynamic-linking",
+      "title": "ELF/符号/动态链接与 ABI",
+      "question": "符号从哪个库解析、SONAME/rpath 是否指向预期、ABI 是否向后兼容？",
+      "knowledge": "asset/knowledge/elf-abi-dynamic-linking.md",
+      "checklist": "asset/checklists/elf-abi-dynamic-linking.md",
+      "probes": ["scripts/probe_elf.py"],
+      "sources": ["references/工具链与打包.md", "references/标准与手册.md"]
+    },
+    {
+      "id": "toolchain-build-cross",
+      "title": "构建工具链与交叉编译",
+      "question": "在哪个编译器/构建器版本上可复现，交叉 sysroot 与依赖发现是否闭合？",
+      "knowledge": "asset/knowledge/toolchain-build-cross.md",
+      "checklist": "asset/checklists/toolchain-build-cross.md",
+      "probes": ["scripts/probe_toolchain.py", "scripts/probe_pkg.py"],
+      "sources": ["references/工具链与打包.md"]
+    },
+    {
+      "id": "systemd-dbus-cgroup-security",
+      "title": "systemd/dbus/cgroups 与安全",
+      "question": "服务如何被拉起与约束，权限与标签是否最小且可审计？",
+      "knowledge": "asset/knowledge/systemd-dbus-cgroup-security.md",
+      "checklist": "asset/checklists/systemd-dbus-cgroup-security.md",
+      "probes": ["scripts/probe_systemd.py", "scripts/probe_caps.py", "scripts/probe_cgroup.py"],
+      "sources": ["references/系统与服务.md"]
+    },
+    {
+      "id": "distro-packaging",
+      "title": "发行版差异与打包",
+      "question": "这个包名/依赖/多架构路径在目标发行版族上成立吗？",
+      "knowledge": "asset/knowledge/distro-packaging.md",
+      "checklist": "asset/checklists/distro-packaging.md",
+      "probes": ["scripts/probe_os.py", "scripts/probe_pkg.py"],
+      "sources": ["references/工具链与打包.md", "references/系统与服务.md"]
+    },
+    {
+      "id": "shell-observability-deploy",
+      "title": "Shell 健壮性与部署可观测",
+      "question": "脚本在异常输入下是否失败即停，运行状态能否被日志与健康检查观测？",
+      "knowledge": "asset/knowledge/shell-observability-deploy.md",
+      "checklist": "asset/checklists/shell-observability-deploy.md",
+      "probes": ["scripts/probe_fs.py", "scripts/probe_tracing.py", "scripts/probe_locale.py"],
+      "sources": ["references/排障与性能.md", "references/系统与服务.md"]
+    }
+  ]
+}
