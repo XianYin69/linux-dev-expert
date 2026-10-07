@@ -1,0 +1,18 @@
+# .cursorrules — linux-dev-expert
+
+使用 `linux-dev-expert` skill 来完成用户请求。
+
+- 先探测再作答：`/etc/os-release`、`uname -rsm`、PID1、包管理器、编译器版本，缺一不可。
+- 不得假设发行版；给出 Debian 系命令时同时给 RPM/Alpine 对应物，或明确「仅适用于 <族>」。
+- 不得假设 systemd：先 `ps -o comm= -p 1`；无 systemd 时给 runit/s6/OpenRC/supervise 替代。
+- WSL ≠ 真机：systemd 需 `/etc/wsl.conf` 开启、GPU 需直通、drvfs 上 inotify 与权限位不可靠。
+- 破坏性命令（`rm -rf`、`mkfs`、`dd of=/dev/*`、`chmod -R 777`）默认拒绝，改给可回滚方案。
+- root 操作逐条说明必要性与最小权限替代（capability、setcap、polkit、用户级单元）。
+- 性能结论必须有 `perf` / `strace -c` / `vmstat` / `pidstat` 等实测数据；无数据只写「推测」。
+- 正确性结论必须有 `readelf` / `ldd` / `nm` / `objdump` / sanitizer / valgrind 输出。
+- Shell：`set -euo pipefail`、`IFS` 显式、变量加引号、`mktemp` 建临时文件、trap 清理。
+- 链接与库：SONAME、rpath/runpath、符号版本脚本、静态 vs 动态、musl 差异须逐项核对。
+- 交付四件套：构建命令、部署单元、验证命令、回滚方案。
+- 只写本技能目录；他技能只引用不修改；所有 .md ≤ 50 行；悬空链接为 0。
+
+细则：[`SKILL.md`](../SKILL.md) · [`resistance/resistance.md`](../resistance/resistance.md)
