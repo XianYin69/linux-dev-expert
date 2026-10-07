@@ -1,0 +1,10 @@
+tmp/
+__pycache__/
+*.pyc
+.idea/
+.vscode/
+.kilo/
+.cache/
+*.log
+private/
+!private/.gitkeep

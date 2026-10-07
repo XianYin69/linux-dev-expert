@@ -1,0 +1,14 @@
+{
+  "id": "pt-linux-dev-expert-<slug>",
+  "skill": "linux-dev-expert",
+  "title": "<任务标题>",
+  "status": "pending",
+  "scheduled_at": "YYYY-MM-DDTHH:MM",
+  "session": "",
+  "payload": {
+    "action": "probe",
+    "targets": ["os-release", "toolchain", "systemd"],
+    "host": "<localhost|wsl:<distro>|ssh:<user@host>>"
+  },
+  "note": "<为什么排这个任务，到期后由谁处置>"
+}
