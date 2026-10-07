@@ -1,0 +1,115 @@
+{
+  "skill": "linux-dev-expert",
+  "dependencies": [
+    {
+      "name": "c-expert",
+      "type": "skill",
+      "source_url": "local://c-expert",
+      "license": "MIT",
+      "version": "local",
+      "install": "sms:install c-expert",
+      "checked_at": "2026-10-07T08:00",
+      "source_url_status": "verified"
+    },
+    {
+      "name": "cpp-expert",
+      "type": "skill",
+      "source_url": "local://cpp-expert",
+      "license": "MIT",
+      "version": "local",
+      "install": "sms:install cpp-expert",
+      "checked_at": "2026-10-07T08:00",
+      "source_url_status": "verified"
+    },
+    {
+      "name": "python-expert",
+      "type": "skill",
+      "source_url": "local://python-expert",
+      "license": "MIT",
+      "version": "local",
+      "install": "sms:install python-expert",
+      "checked_at": "2026-10-07T08:00",
+      "source_url_status": "verified"
+    },
+    {
+      "name": "concurrency-design",
+      "type": "skill",
+      "source_url": "local://concurrency-design",
+      "license": "MIT",
+      "version": "local",
+      "install": "sms:install concurrency-design",
+      "checked_at": "2026-10-07T08:00",
+      "source_url_status": "verified"
+    },
+    {
+      "name": "database-management",
+      "type": "skill",
+      "source_url": "local://database-management",
+      "license": "MIT",
+      "version": "local",
+      "install": "sms:install database-management",
+      "checked_at": "2026-10-07T08:00",
+      "source_url_status": "verified"
+    },
+    {
+      "name": "interface-design-expert",
+      "type": "skill",
+      "source_url": "local://interface-design-expert",
+      "license": "MIT",
+      "version": "local",
+      "install": "sms:install interface-design-expert",
+      "checked_at": "2026-10-07T08:00",
+      "source_url_status": "verified"
+    },
+    {
+      "name": "code-guidelines",
+      "type": "skill",
+      "source_url": "local://code-guidelines",
+      "license": "MIT",
+      "version": "local",
+      "install": "sms:install code-guidelines",
+      "checked_at": "2026-10-07T08:00",
+      "source_url_status": "verified"
+    },
+    {
+      "name": "git",
+      "type": "software",
+      "source_url": "https://github.com/git/git",
+      "license": "GPL-2.0",
+      "version": "system",
+      "install": "apt-get install -y git | dnf install -y git | apk add git",
+      "checked_at": "2026-10-07T08:00",
+      "source_url_status": "verified"
+    },
+    {
+      "name": "bash",
+      "type": "software",
+      "source_url": "https://git.savannah.gnu.org/cgit/bash.git",
+      "license": "GPL-3.0",
+      "version": "system",
+      "install": "apt-get install -y bash | dnf install -y bash | apk add bash",
+      "checked_at": "2026-10-07T08:00",
+      "source_url_status": "verified"
+    },
+    {
+      "name": "GCC",
+      "type": "software",
+      "source_url": "https://github.com/gcc-mirror/gcc",
+      "license": "GPL-3.0",
+      "version": "system",
+      "install": "apt-get install -y build-essential | dnf groupinstall -y 'Development Tools' | apk add build-base",
+      "checked_at": "2026-10-07T08:00",
+      "source_url_status": "verified"
+    },
+    {
+      "name": "CMake",
+      "type": "software",
+      "source_url": "https://gitlab.kitware.com/cmake/cmake",
+      "license": "BSD-3-Clause",
+      "version": "system",
+      "install": "apt-get install -y cmake | dnf install -y cmake | apk add cmake",
+      "checked_at": "2026-10-07T08:00",
+      "source_url_status": "verified"
+    }
+  ]
+}
